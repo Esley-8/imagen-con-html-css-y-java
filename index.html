@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .sidebar {
+      width: 260px;
+      height: 100vh;
+      background-color: white;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    }
+    .sidebar-header {
+      background-color: #7e57c2;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sidebar-section {
+      padding: 15px 20px 5px;
+      font-size: 12px;
+      color: gray;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .sidebar-menu {
+      padding-left: 0;
+      list-style: none;
+      margin: 0 0 10px 0;
+    }
+    .sidebar-menu li {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      color: #444;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .sidebar-menu li i {
+      margin-right: 12px;
+      color: gray;
+      width: 20px;
+      text-align: center;
+    }
+    .sidebar-menu li:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    Forms
+    <i class="fas fa-wrench"></i>
+  </div>
+
+  <div class="sidebar-section">Navigations</div>
+  <ul class="sidebar-menu">
+    <li><i class="fas fa-th"></i> Dashboards</li>
+    <li><i class="fas fa-table"></i> Layouts</li>
+    <li><i class="fas fa-envelope"></i> Mailbox</li>
+    <li><i class="fas fa-cart-shopping"></i> Ecommerce</li>
+  </ul>
+
+  <div class="sidebar-section">Apps</div>
+  <ul class="sidebar-menu">
+    <li><i class="fas fa-calendar"></i> Calendar</li>
+    <li><i class="fas fa-comment-dots"></i> Messenger</li>
+    <li><i class="fas fa-user"></i> Contacts</li>
+    <li><i class="fas fa-folder"></i> File Manager</li>
+    <li><i class="fas fa-clipboard-list"></i> To-Do</li>
+    <li><i class="fas fa-newspaper"></i> News Feed</li>
+  </ul>
+</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forms Page</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+
+  <div class="fila">
+    <!-- Basic Forms -->
+    <div class="card">
+      <h2>Basic Forms</h2>
+      <form>
+        <div class="form-group">
+          <label for="email1">Email Address*</label>
+          <input type="email" id="email1" name="email" placeholder="skinner@support.com" required />
+        </div>
+        <div class="form-group">
+          <label for="password1">Password*</label>
+          <input type="password" id="password1" name="password" placeholder="" required />
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="checkme1" name="checkme" />
+          <label for="checkme1">Check Me Out</label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-secondary">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Horizontal Forms -->
+    <div class="card">
+      <h2>Horizontal Forms</h2>
+      <form>
+        <div class="form-group">
+          <label for="email-horizontal">Email Address*</label>
+          <input type="email" id="email-horizontal" name="email" placeholder="demo@support.com" required />
+        </div>
+        <div class="form-group">
+          <label for="password-horizontal">Password*</label>
+          <input type="password" id="password-horizontal" name="password" placeholder="Enter your password" required />
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="remember-horizontal" name="remember" />
+          <label for="remember-horizontal">Remember Me</label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Sign In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="horizontal">
+    <!-- Inline Forms -->
+    <div class="card">
+      <h2>INLINE FORMS</h2>
+      <form class="fila">
+        <div class="form-group">
+          <input type="email" name="email" placeholder="skinner@support.com" required />
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" placeholder="" required />
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="remember1" name="remember" />
+          <label for="remember1">Remember me</label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="fila">
+    <!-- Basic Inputs -->
+    <div class="card">
+      <h2>Basic INPUTS</h2>
+      <form>
+        <div class="form-group">
+          <label for="input1">Basic input*</label>
+          <input type="email" id="input1" name="email" placeholder="skinner@support.com" required />
+        </div>
+        <div class="form-group">
+          <label for="placeholder">Placeholder*</label>
+          <input type="text" id="placeholder" placeholder="Your title in placeholder" required />
+        </div>
+        <div class="form-group">
+          <label for="password-basic">Password*</label>
+          <input type="password" id="password-basic" placeholder="Password input" required />
+        </div>
+        <div class="form-group">
+          <label>Read Only*</label>
+          <input type="text" value="You can't change me" readonly />
+        </div>
+        <div class="form-group">
+          <label>Select box*</label>
+          <select required>
+            <option value="" disabled selected>Select one value</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="rounded">Round input*</label>
+          <input type="text" id="rounded" class="rounded" placeholder=".form-control round" required />
+        </div>
+        <div class="form-group">
+          <label for="maxlength">Maximum Length*</label>
+          <input type="text" id="maxlength" maxlength="6" placeholder="Max 6 characters" required />
+        </div>
+        <div class="form-group">
+          <label>Static text*</label>
+          <input type="text" value="skinner@gmail.com" readonly />
+        </div>
+        <div class="form-group">
+          <label for="color">Color*</label>
+          <input type="color" id="color" name="color" />
+        </div>
+        <div class="form-group">
+          <label for="upload">Upload file*</label>
+          <input type="file" id="upload" name="file" />
+        </div>
+        <div class="form-group">
+          <label for="textarea">Textarea*</label>
+          <textarea id="textarea" placeholder="Textarea" required></textarea>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="checkme3" name="checkme" />
+          <label for="checkme3">Check Me Out</label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-secondary">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Input Groups -->
+<div class="card">
+    <h2>Input Groups</h2>
+    <form>
+      <div class="form-group">
+        <label for="username1">Input Groups*</label>
+  
+        <!-- Username con ícono @ a la izquierda -->
+        <div class="input-group">
+          <span class="input-group-addon">@</span>
+          <input type="text" id="username1" placeholder="Username" />
+        </div>
+  
+        <!-- Amount con ícono $ a la izquierda y .00 a la derecha -->
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <input type="text" placeholder="Amount" />
+          <span class="input-group-addon">.00</span>
+        </div>
+  
+        <!-- Otro con solo .00 a la derecha -->
+        <div class="input-group">
+          <input type="text" placeholder="Amount" />
+          <span class="input-group-addon">.00</span>
+        </div>
+      </div>
+  
+      <hr />
+  
+      <div class="form-group">
+        <label for="username2">Input Groups*</label>
+  
+        <!-- Tres inputs con @ ícono a la izquierda -->
+        <div class="input-group">
+          <span class="input-group-addon">@</span>
+          <input type="text" placeholder="Username" />
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">@</span>
+          <input type="text" placeholder="Username" />
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">@</span>
+          <input type="text" placeholder="Username" />
+        </div>
+      </div>
+  
+      <hr />
+  
+      <div class="form-group">
+        <label>Checkboxes</label>
+        <div class="input-group">
+          <span class="input-group-addon">
+            <input type="checkbox" />
+          </span>
+          <input type="text" />
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Radio</label>
+        <div class="input-group">
+          <span class="input-group-addon">
+            <input type="radio" />
+          </span>
+          <input type="text" />
+        </div>
+      </div>
+  
+      <hr />
+  
+      <div class="form-group">
+        <label>Button Addons</label>
+  
+        <!-- Botón violeta a la izquierda -->
+        <div class="input-group">
+          <button class="input-group-button purple">Go</button>
+          <input type="text" />
+        </div>
+  
+        <!-- Botón violeta a la derecha -->
+        <div class="input-group">
+          <input type="text" />
+          <button class="input-group-button purple">Go</button>
+        </div>
+  
+        <!-- Botón verde a la izquierda -->
+        <div class="input-group">
+          <button class="input-group-button green">Action</button>
+          <input type="text" />
+        </div>
+  
+        <!-- Botón rojo a la derecha -->
+        <div class="input-group">
+          <input type="text" />
+          <button class="input-group-button red">Action</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Input Validation -->
+<div class="card">
+    <h2>Input Validation</h2>
+    <form>
+      <!-- Success -->
+      <div class="form-group has-success">
+        <label for="success">Input with Success</label>
+        <input type="text" id="success" placeholder="Input with success" />
+        <small class="success-text">Success! You've done it.</small>
+      </div>
+  
+      <!-- Warning -->
+      <div class="form-group has-warning">
+        <label for="warning">Input with Warning</label>
+       <input type="text" id="warning" placeholder="Input with warning" />
+        <small class="warning-text">Help block with warning</small>
+      </div>
+  
+      <!-- Danger -->
+      <div class="form-group has-danger">
+        <label for="danger">Input with Danger</label>
+        <input type="text" id="danger" placeholder="Input with danger" />
+        <small class="danger-text">Help block with warning</small>
+      </div>
+    </form>
+  </div>
+
+  <div class="fila">
+    <!-- Check Boxes -->
+    <div class="card">
+      <h2>Check Boxes</h2>
+      <form>
+        <div class="form-group">
+          <label>Check Boxes:</label>
+          <div>
+            <input type="checkbox" id="unchecked" />
+            <label for="unchecked">Unchecked</label>
+          </div>
+          <div>
+            <input type="checkbox" id="checked" checked />
+            <label for="checked">checked</label>
+          </div>
+          <div>
+            <input type="checkbox" id="disabled-unchecked" disabled />
+            <label for="disabled-unchecked">Disable Unchecked</label>
+          </div>
+          <div>
+            <input type="checkbox" id="disabled-checked" disabled checked />
+            <label for="disabled-checked">Disable checked</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  
+    <!-- Radio Boxes -->
+    <div class="card">
+      <h2>Radio Boxes</h2>
+      <form>
+        <div class="form-group">
+          <label>Radio Boxes:</label>
+          <div>
+            <input type="radio" id="radio1" name="radios" />
+            <label for="radio1">Unchecked</label>
+          </div>
+          <div>
+            <input type="radio" id="radio2" name="radios" checked />
+            <label for="radio2">Selected</label>
+          </div>
+          <div>
+            <input type="radio" id="radio3" name="radios-disabled" disabled />
+            <label for="radio3">Disable Radio</label>
+          </div>
+          <div>
+            <input type="radio" id="radio4" name="radios-disabled2" disabled checked />
+            <label for="radio4">Disable Selected</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Vertical Form with Icon -->
+<div class="card">
+    <h2>Vertical from with icon</h2>
+    <form>
+      <div class="form-group">
+        <label for="username-icon">User Name*</label>
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="icon-user"></i> <!-- Asegúrate de tener los íconos disponibles, por ejemplo con Font Awesome -->
+          </span>
+          <input type="text" id="username-icon" placeholder="User Name" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password-icon">Password*</label>
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="icon-lock"></i>
+          </span>
+          <input type="password" id="password-icon" placeholder="Password" required />
+        </div>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="remember-icon" />
+        <label for="remember-icon">Remember Me</label>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Horizontal Forms con íconos -->
+<div class="card">
+    <h2>Horizontal Forms</h2>
+    <form>
+      <div class="form-group horizontal-group">
+        <label for="username-horizontal">User Name*</label>
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="icon-user"></i>
+          </span>
+          <input type="text" id="username-horizontal" placeholder="User Name" required />
+        </div>
+        <small class="help-text">Ex: block-level help text here.</small>
+      </div>
+  
+      <div class="form-group horizontal-group">
+        <label for="password-horizontal">Password*</label>
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="icon-lock"></i>
+          </span>
+          <input type="password" id="password-horizontal" placeholder="Password" required />
+        </div>
+      </div>
+  
+      <div class="checkbox-group">
+        <input type="checkbox" id="remember-horizontal" name="remember" />
+        <label for="remember-horizontal">Remember Me</label>
+      </div>
+  
+      <div class="form-actions right">
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Sidebar -->
+<div id="sidebar" class="bg-white border-end position-fixed h-100" style="width: 250px; z-index: 1050;">
+  <!-- Header -->
+  <div class="bg-primary text-white d-flex justify-content-between align-items-center p-3">
+    <strong>Forms</strong>
+    <button class="btn btn-sm btn-light text-danger" onclick="toggleSidebar()">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+
+
+</body>
+
+</html>
